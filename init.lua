@@ -3,7 +3,7 @@ require("config.lazy")
 
 -- FIXME --
 --- Intelephense
-require("lspconfig").intelephense.setup {
+require("lspconfig").intelephense.setup({
   settings = {
     intelephense = {
       format = {
@@ -11,12 +11,12 @@ require("lspconfig").intelephense.setup {
       },
     },
   },
-}
+})
 
 -- pylsp
-require("lspconfig").pylsp.setup {
+require("lspconfig").pylsp.setup({
   settings = {
-    pylsp = {      
+    pylsp = {
       plugins = {
         pycodestyle = { enabled = false },
         flake8 = { enabled = false },
@@ -33,4 +33,4 @@ require("lspconfig").pylsp.setup {
       },
     },
   },
-}
+})
