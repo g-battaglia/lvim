@@ -20,7 +20,7 @@ return {
           select = false,
         }),
       })
-      opts.experimental = { ghost_text = true }
+      opts.experimental = { ghost_text = false }
     end,
   }
 }
