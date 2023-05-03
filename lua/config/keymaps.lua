@@ -29,3 +29,9 @@ map("n", "<leader><tab>l", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
 -- Open config files
 map("n", "<leader>xc", "<cmd>edit $MYVIMRC<cr>", { desc = "Open config file" })
+
+-- Copilot.vim mappings
+map("i", "<C-]>", "<Plug>(copilot-next)", { silent = true, desc = "Copilot next" })
+map("i", "<C-[>", "<Plug>(copilot-prev)", { silent = true, desc = "Copilot prev" })
+map("i", "<C-}>", "<Plug>(copilot-complete)", { silent = true, desc = "Copilot complete" })
+map("i", "<C-{>", "<Plug>(copilot-dismiss)", { silent = true, desc = "Copilot dismiss" })
