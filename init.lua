@@ -34,3 +34,20 @@ require("lspconfig").pylsp.setup({
     },
   },
 })
+
+-- Copilot Lualine
+require("lualine").setup {
+  sections = {
+    lualine_x = {
+      {
+        "copilot",
+        -- default is true.
+        show_running = true,
+        symbols = {
+          -- default is " "
+          running = "🚀",
+        }
+      },
+    }
+  }
+}
