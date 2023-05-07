@@ -1,6 +1,9 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+-- To debug ad the start of vim:
+-- print("opts", vim.inspect(opts.sections.lualine_x))
+
 -- FIXME --
 --- Intelephense
 require("lspconfig").intelephense.setup({
@@ -34,20 +37,3 @@ require("lspconfig").pylsp.setup({
     },
   },
 })
-
--- Copilot Lualine
-require("lualine").setup {
-  sections = {
-    lualine_x = {
-      {
-        "copilot",
-        -- default is true.
-        show_running = true,
-        symbols = {
-          -- default is " "
-          running = "🚀",
-        }
-      },
-    }
-  }
-}
