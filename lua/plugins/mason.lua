@@ -11,7 +11,6 @@ return {
         "html-lsp",
         "json-lsp",
         "lua-language-server",
-        "prettierd",
         "shfmt",
         "stylua",
         "typescript-language-server",

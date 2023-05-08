@@ -35,3 +35,6 @@ map("i", "<C-]>", "<Plug>(copilot-next)", { silent = true, desc = "Copilot next"
 map("i", "<C-[>", "<Plug>(copilot-prev)", { silent = true, desc = "Copilot prev" })
 map("i", "<C-}>", "<Plug>(copilot-complete)", { silent = true, desc = "Copilot complete" })
 map("i", "<C-{>", "<Plug>(copilot-dismiss)", { silent = true, desc = "Copilot dismiss" })
+
+-- Prettier
+map("n", "<leader>pp", "<cmd>Prettier<cr>", { silent = true, desc = "Prettier" })
