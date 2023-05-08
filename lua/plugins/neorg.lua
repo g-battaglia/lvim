@@ -12,11 +12,16 @@ return {
               workspaces = {
                 notes = "~/notes",
               },
+              default_workspace = "notes",
             },
           },
+          ['core.export'] = {} -- Exports Neorg documents
         },
       },
       dependencies = { { "nvim-lua/plenary.nvim" } },
+      keys = {
+        { "<leader>ni", "<cmd>Neorg index<cr>", desc = "Open Neorg Index" },
+      },
     },
   },
 }
