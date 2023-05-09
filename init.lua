@@ -37,3 +37,23 @@ require("lspconfig").pylsp.setup({
     },
   },
 })
+
+
+require("tokyonight").setup({ 
+  -- use the night style
+  style = "moon",
+  -- disable italic for functions
+  styles = {
+    functions = {}
+  },
+  sidebars = { "qf", "vista_kind", "terminal", "packer" },
+  on_colors = function(colors)
+    colors.bg = "#011627"
+    colors.bg_dark = "#011627"
+    colors.bg_sidebar = "#011627"
+    colors.bg_float = "#011627"
+  end
+})
+
+-- Set colorscheme (order is important here)
+vim.cmd("colorscheme tokyonight")
