@@ -11,7 +11,7 @@ map("n", "<M-Down>", "<cmd>:m .+1<CR>==", { silent = true, desc = "Move line dow
 map("n", "<M-Up>", "<cmd>:m .-2<CR>==", { silent = true, desc = "Move line up" })
 
 -- Paste from clipboard without copying the old register
-map("x", "<leader>p", [["_dP]], { silent = true, desc = "Paste from clipboard without copying the old register" })
+map("x", "p", [["_dP]], { silent = true, desc = "Paste from clipboard without copying the old register" })
 
 -- Cut from clipboard without copying the old register
 map("x", "<leader>x", [["_d]], { silent = true, desc = "Cut from clipboard without copying the old register" })
