@@ -12,12 +12,12 @@ return {
         desc = "Edit marks... (harpoon)",
       },
       {
-        "<leader>hm",
+        "<leader>hh",
         "<cmd>Telescope harpoon marks<cr>",
         desc = "Show marks... (harpoon)",
       },
       {
-        "<leader>hM",
+        "<leader>hm",
         function()
           require("harpoon.mark").add_file()
         end,
