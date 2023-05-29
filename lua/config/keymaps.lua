@@ -37,4 +37,7 @@ map("i", "<C-}>", "<Plug>(copilot-complete)", { silent = true, desc = "Copilot c
 map("i", "<C-{>", "<Plug>(copilot-dismiss)", { silent = true, desc = "Copilot dismiss" })
 
 -- Prettier
-map("n", "<leader>pp", "<cmd>Prettier<cr>", { silent = true, desc = "Prettier" })
+map({ "n", "v" }, "<leader>pp", "<cmd>Prettier<cr>", { silent = true, desc = "Prettier" })
+map({ "n", "v" }, "<leader>pr", "<cmd>PrettierPartial<cr>", { silent = true, desc = "Prettier Partial" })
+map({ "n", "v" }, "<leader>ps", "<cmd>PrettierFragment<cr>", { silent = true, desc = "Prettier Fragment" })
+

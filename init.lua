@@ -38,29 +38,6 @@ require("lspconfig").pylsp.setup({
   },
 })
 
--- To NightOwlify:
--- require("tokyonight").setup({
---   -- use the night style
---   style = "moon",
---   -- disable italic for functions
---   styles = {
---     functions = {}
---   },
---   sidebars = { "qf", "vista_kind", "terminal", "packer" },
---   on_colors = function(colors)
---     colors.bg = "#011627"
---     colors.bg_dark = "#011627"
---     colors.bg_sidebar = "#011627" -- Term And NvimTree And WhichKey
---     colors.bg_float = "#011627" -- Floating windows like Lazy, telescope, etc
---     colors.bg_statusline = "#011627" -- Lualine
---     colors.bg_popup = "#011627"
---
---     vim.cmd("colorscheme tokyonight")
---     vim.cmd("hi BufferLineFill guibg='#011627'")
---   end
--- })
-
-
 require("tokyonight").setup({
   -- use the night style
   style = "storm",
