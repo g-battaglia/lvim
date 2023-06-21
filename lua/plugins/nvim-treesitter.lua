@@ -5,12 +5,6 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      {
-        "mrjones2014/nvim-ts-rainbow",
-      },
-    },
-
     opts = {
       rainbow = { enable = true, extended_mode = false, max_file_lines = nil },
       ensure_installed = {
@@ -35,7 +29,7 @@ return {
         "php",
         "phpdoc",
         "css",
-      }
+      },
     },
   },
 }
