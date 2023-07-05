@@ -41,5 +41,5 @@ require("lspconfig").pylsp.setup({
 require("tokyonight").setup({
   -- use the night style
   style = "storm",
-  vim.cmd("hi BufferLineFill guibg='#1e2030'")
+  vim.cmd("hi BufferLineFill guibg='#1e2030'"),
 })
