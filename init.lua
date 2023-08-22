@@ -119,3 +119,5 @@ require("tokyonight").setup({
 })
 
 
+-- CMD Line height 0:
+-- vim.opt.cmdheight = 0

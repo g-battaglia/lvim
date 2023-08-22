@@ -5,8 +5,8 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     opts = {
       draw = {
-        delay = 0,
-        animation = require('mini.indentscope').gen_animation.none()
+        delay = 50,
+        animation = require("mini.indentscope").gen_animation.none(),
       },
       -- symbol = "▏",
       symbol = "│",
@@ -25,7 +25,7 @@ return {
           "notify",
           "toggleterm",
           "lazyterm",
-          "nvterm"
+          "terminal",
         },
         callback = function()
           vim.b.miniindentscope_disable = true
