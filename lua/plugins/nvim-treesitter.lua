@@ -45,7 +45,8 @@ return {
         "phpdoc",
         "css",
         "scss",
-        "jsonc"
+        "jsonc",
+        "vue"
       },
     },
   },
