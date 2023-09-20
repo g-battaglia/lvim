@@ -121,3 +121,6 @@ require("tokyonight").setup({
 
 -- CMD Line height 0:
 -- vim.opt.cmdheight = 0
+
+-- Disable relative line number:
+vim.opt.relativenumber = false
