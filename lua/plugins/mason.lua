@@ -3,20 +3,20 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "intelephense",
-        "phpactor",
-        "pyright",
+        "css-lsp",
         "emmet-ls",
         "eslint-lsp",
         "html-lsp",
+        "intelephense",
         "json-lsp",
         "lua-language-server",
+        "phpactor",
+        "pyright",
+        "python-lsp-server",
         "shfmt",
         "stylua",
         "typescript-language-server",
         "vue-language-server",
-        "css-lsp",
-        "python-lsp-server",
       },
     }
   }

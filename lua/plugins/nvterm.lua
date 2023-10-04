@@ -21,7 +21,7 @@ return {
         "<leader>tc",
         "<cmd>lua require('nvterm.terminal').send('composer start')<cr>",
         desc = "Run composer start in NvTerm"
-      }
+      },
     },
     config = function()
       require("nvterm").setup()

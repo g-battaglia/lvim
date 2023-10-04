@@ -12,7 +12,7 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     {
       "LazyVim/LazyVim",
-      import = "lazyvim.plugins"
+      import = "lazyvim.plugins",
     },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.typescript" },
@@ -26,6 +26,7 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
   },
+
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
@@ -48,7 +49,7 @@ require("lazy").setup({
         "tarPlugin",
         "tohtml",
         "tutor",
-        "zipPlugin"
+        "zipPlugin",
       },
     },
   },
