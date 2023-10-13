@@ -5,5 +5,5 @@ return {
   { "prettier/vim-prettier" },
   { "g-battaglia/lualine-copilot" },
   { "mbbill/undotree" },
-  {'mechatroner/rainbow_csv'}
+  { "mechatroner/rainbow_csv" },
 }

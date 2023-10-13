@@ -6,5 +6,5 @@ return {
       -- default is true.
       show_running = true,
     })
-  end
+  end,
 }

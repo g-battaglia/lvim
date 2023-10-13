@@ -10,9 +10,7 @@ return {
         "HiPhish/nvim-ts-rainbow2",
       },
     },
-
     opts = {
-
       -- nvim-ts-rainbow2 configuration
       rainbow = {
         enable = true,
@@ -21,7 +19,6 @@ return {
         -- Which query to use for finding delimiters
         query = "rainbow-parens",
       },
-
       ensure_installed = {
         "bash",
         "vimdoc",
@@ -46,7 +43,7 @@ return {
         "css",
         "scss",
         "jsonc",
-        "vue"
+        "vue",
       },
     },
   },

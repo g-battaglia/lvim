@@ -4,7 +4,7 @@
 
 -- :set spelllang+=it
 vim.o.spelllang = "en_us,it"
-
+vim.o.spell = true
 
 -- To debug ad the start of vim:
 -- print("opts", vim.inspect(opts.sections.lualine_x))
@@ -14,3 +14,6 @@ vim.o.spelllang = "en_us,it"
 
 -- Disable relative line number:
 vim.opt.relativenumber = false
+
+-- Disable Autoformat:
+vim.g.autoformat = false
