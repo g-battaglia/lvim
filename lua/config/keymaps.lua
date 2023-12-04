@@ -47,3 +47,7 @@ map({ "n", "v" }, "<leader>ps", "<cmd>PrettierFragment<cr>", { silent = true, de
 
 -- Change directory to current file
 map("n", "<leader>td", "<cmd>cd %:p:h<cr>:pwd<cr>", { desc = "Change directory to current file" })
+
+-- Git Signs
+map("n", "<leader>gn", "<cmd>lua require('gitsigns').next_hunk()<cr>", { silent = true, desc = "Next Git Hunk" })
+map("n", "<leader>gp", "<cmd>lua require('gitsigns').prev_hunk()<cr>", { silent = true, desc = "Previous Git Hunk" })

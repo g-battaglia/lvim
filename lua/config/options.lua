@@ -17,3 +17,5 @@ vim.opt.relativenumber = false
 
 -- Disable Autoformat:
 vim.g.autoformat = false
+
+vim.g.nvim_tree_respect_buf_cwd = 1
