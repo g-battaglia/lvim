@@ -17,6 +17,11 @@ map("v", "<M-Up>", ":m '<-2<cr>gv=gv", { silent = true, desc = "Move line up" })
 -- Paste from clipboard without copying the old register
 map("x", "p", [["_dP]], { silent = true, desc = "Paste from clipboard without copying the old register" })
 
+-- "d" deletes the text and copies it to the black hole register
+map("n", "d", '"_d', { silent = true, desc = "Delete text and copy to black hole register" })
+map("v", "d", '"_d', { silent = true, desc = "Delete text and copy to black hole register" })
+map("n", "dd", '"_dd', { silent = true, desc = "Delete line and copy to black hole register" })
+
 -- Cut from clipboard without copying the old register
 map("x", "<leader>x", [["_d]], { silent = true, desc = "Cut from clipboard without copying the old register" })
 map("x", "<leader>d", [["_d]], { silent = true, desc = "Cut from clipboard without copying the old register" })

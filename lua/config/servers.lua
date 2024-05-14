@@ -56,6 +56,7 @@ require("lspconfig").intelephense.setup({
         "posix",
         "pspell",
         "readline",
+        "random",
         "session",
         "shmop",
         "snmp",
