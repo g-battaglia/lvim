@@ -20,10 +20,12 @@ return {
         -- The behavior fixes indentation errors.
         ["<CR>"] = cmp.mapping.confirm({
           -- behavior = cmp.ConfirmBehavior.Replace,
-          select = true,
+          select = false
         }),
       })
       opts.experimental = { ghost_text = false }
+      opts.preselect = cmp.PreselectMode.None
+
     end,
   },
 }
