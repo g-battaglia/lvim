@@ -1,6 +1,17 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    keys = {
+      {
+        "<leader>fe",
+        function()
+          require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+        end,
+        desc = "Explorer NeoTree (cwd)",
+      },
+      { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (cwd)", remap = true },
+    },
+
     opts = {
       filesystem = {
         filtered_items = {
@@ -28,6 +39,7 @@ return {
           never_show_by_pattern = { -- uses glob style patterns
             --".null-ls_*",
           },
+          bind_to_cwd = true, -- when true, the root of the tree will be the current working directory
         },
       },
     },
