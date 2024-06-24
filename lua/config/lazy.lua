@@ -22,15 +22,9 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.black" },
     { import = "lazyvim.plugins.extras.editor.aerial" },
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
-
     { import = "lazyvim.plugins.extras.coding.copilot-chat" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.php" },
     { import = "lazyvim.plugins.extras.lang.toml" },
-
-    -- { import = "lazyvim.plugins.extras.formatting.prettier" },
-    -- { import = "lazyvim.plugins.extras.coding.copilot" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 
     -- || Import/override with your plugins
     { import = "plugins" },
