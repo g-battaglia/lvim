@@ -8,8 +8,12 @@ return {
         desc = "Toggle NvTerm",
       },
     },
-    config = function()
-      require("nvterm").setup()
-    end,
+
+    -- | This:
+    -- config = function()
+    --   require("nvterm").setup()
+    -- end,
+    -- | is equivalent to this:
+    opts = {},
   },
 }
