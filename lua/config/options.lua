@@ -22,6 +22,9 @@ vim.g.nvim_tree_respect_buf_cwd = 1
 
 -- Shoq empty chars:
 vim.opt.list = true
-vim.opt.listchars = { space = "⋅", tab = '→ ' }
+vim.opt.listchars = { space = "⋅", tab = "→ " }
 -- vim.opt.listchars:append("space:⋅")
 -- vim.opt.listchars:append "eol:↴"
+
+-- Set root directory
+vim.g.root_spec = { "lsp", { "package.json", ".git", "lua" }, "cwd" }
