@@ -28,3 +28,7 @@ vim.opt.listchars = { space = "⋅", tab = "→ " }
 
 -- Set root directory
 vim.g.root_spec = { "lsp", { "package.json", ".git", "lua" }, "cwd" }
+
+-- Fold
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldmethod = 'expr'
