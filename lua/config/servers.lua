@@ -108,6 +108,7 @@ require("lspconfig").pylsp.setup({
   },
 })
 
+-- CSS
 require("lspconfig").cssls.setup({
   settings = {
     css = {
