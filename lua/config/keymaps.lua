@@ -56,3 +56,9 @@ map("n", "<leader>td", "<cmd>cd %:p:h<cr>:pwd<cr>", { desc = "Change directory t
 -- Git Signs
 map("n", "<leader>gn", "<cmd>lua require('gitsigns').next_hunk()<cr>", { silent = true, desc = "Next Git Hunk" })
 map("n", "<leader>gp", "<cmd>lua require('gitsigns').prev_hunk()<cr>", { silent = true, desc = "Previous Git Hunk" })
+
+-- cmd + tt should be same as cmd + ft
+map("n", "<leader>tt", "<leader>ft", { silent = true, desc = "Toggle terminal" })
+
+--SNACKS
+map("n", "<leader>tt", "<cmd>lua require('snacks').terminal()<cr>", { silent = true, desc = "Open Snacks Terminal" })
