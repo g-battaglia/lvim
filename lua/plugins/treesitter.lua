@@ -34,7 +34,7 @@ return {
         "vue",
       },
       highlight = {
-        enable = true, -- false will disable the whole extension
+        enable = true,            -- false will disable the whole extension
         disable = { "markdown" }, -- list of language that will be disabled
       },
     },
