@@ -4,4 +4,3 @@
 
 -- Set the colorscheme
 -- vim.cmd("hi BufferLineFill guibg='#1e2030'")
-vim.cmd([[colorscheme tokyonight-storm]])
