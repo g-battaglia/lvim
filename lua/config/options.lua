@@ -32,3 +32,6 @@ vim.g.root_spec = { "lsp", { "package.json", ".git", "lua" }, "cwd" }
 -- Fold
 vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldmethod = 'expr'
+
+-- Disable conceal
+vim.opt.conceallevel = 0

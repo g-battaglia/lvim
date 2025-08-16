@@ -15,8 +15,8 @@ return {
         "json",
         "lua",
         "luap",
-        -- "markdown",
-        -- "markdown_inline",
+        "markdown",
+        "markdown_inline",
         "python",
         "query",
         "regex",
@@ -35,7 +35,6 @@ return {
       },
       highlight = {
         enable = true,            -- false will disable the whole extension
-        disable = { "markdown" }, -- list of language that will be disabled
       },
     },
   },
