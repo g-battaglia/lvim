@@ -4,38 +4,44 @@ require("config.lazy")
 -- LSP Servers
 require("config.servers")
 
--- Keymaps per il terminale Python
--- In visual mode, premi <leader>r per mandare il codice a Python nel terminale
+-- Keymap per eseguire codice Python selezionato tramite file temporaneo
 vim.keymap.set("v", "<leader>r", function()
-  -- copia la selezione visiva nel registro "+"
+  -- Copia la selezione nel registro di sistema
   vim.cmd('normal! "+y')
-  local selected_text = vim.fn.getreg('+')
+  local code = vim.fn.getreg('+')
 
-  -- crea un file temporaneo
+  -- Crea file temporaneo
   local temp_file = os.tmpname() .. ".py"
   local file = io.open(temp_file, "w")
-  if file then
-    file:write(selected_text)
-    file:close()
-  else
+  if not file then
     vim.notify("Errore nella creazione del file temporaneo", vim.log.levels.ERROR)
     return
   end
 
-  -- se non esiste un terminale aperto, aprilo con python3
-  local bufnr = vim.fn.bufnr('term://*python3')
-  if bufnr == -1 then
+  file:write(code)
+  file:close()
+
+  -- Trova o crea terminale Python
+  local python_buf = vim.fn.bufnr('term://*python3')
+  if python_buf == -1 then
     vim.cmd("botright split | terminal python3")
-    vim.cmd("resize 15") -- altezza del terminale
+    vim.cmd("resize 15")
   else
-    vim.cmd("buffer " .. bufnr)
+    vim.cmd("buffer " .. python_buf)
   end
 
-  -- esegui il file temporaneo e poi eliminalo
+  -- Esegui il file e cancellalo
   vim.cmd('startinsert')
-  local exec_command = string.format("exec(open('%s').read()); import os; os.remove('%s')\n", temp_file, temp_file)
-  vim.api.nvim_feedkeys(exec_command, 't', false)
-end, { desc = "Esegui selezione in REPL Python tramite file temporaneo" })
+  local command = string.format("exec(open('%s').read()); import os; os.remove('%s')\n",
+    temp_file, temp_file)
+  vim.api.nvim_feedkeys(command, 't', false)
+
+ -- Torna in normal mode dopo un piccolo delay
+  vim.defer_fn(function()
+    vim.cmd('stopinsert')
+  end, 500)
+end, { desc = "Esegui selezione Python tramite file temporaneo" })
+
 
 -- In normal mode, premi <leader>rr per eseguire l'intero file Python
 vim.keymap.set("n", "<leader>rr", function()
@@ -72,4 +78,3 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.keymap.set("n", "q", "<cmd>bd!<CR>", { buffer = true, desc = "Chiudi terminale" })
   end,
 })
-
