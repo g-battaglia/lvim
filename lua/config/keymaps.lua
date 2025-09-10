@@ -61,6 +61,10 @@ map("n", "<leader>gp", "<cmd>lua require('gitsigns').prev_hunk()<cr>", { silent 
 map("n", "<leader>tT", function() Snacks.terminal() end, { desc = "Terminal (cwd)" })
 map("n", "<leader>tt", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
 
+-- Ripristina frecce a j/k normali
+map({ "n", "x" }, "<Down>", "j", { desc = "Move cursor down" })
+map({ "n", "x" }, "<Up>", "k", { desc = "Move cursor up" })
+
 
 -- Keymap per eseguire codice Python selezionato tramite file temporaneo
 vim.keymap.set("v", "<leader>r", function()

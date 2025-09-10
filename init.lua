@@ -3,3 +3,4 @@ require("config.lazy")
 
 -- LSP Servers
 require("config.servers")
+
