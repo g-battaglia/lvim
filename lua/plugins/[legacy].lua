@@ -4,4 +4,5 @@ return {
   { "prettier/vim-prettier" },
   { "mechatroner/rainbow_csv" },
   { "mustache/vim-mustache-handlebars" },
+  { "sainnhe/everforest" },
 }
