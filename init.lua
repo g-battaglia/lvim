@@ -4,7 +4,7 @@ require("config.lazy")
 -- LSP Servers
 require("config.servers")
 
--- Temporary
+-- Light/Dark Mode Toggle
 local function toggle_light_mode()
   if vim.o.background == "light" then
     vim.o.background = "dark"
@@ -17,3 +17,10 @@ end
 
 vim.api.nvim_create_user_command("ToggleLightMode", toggle_light_mode, {})
 vim.keymap.set("n", "<leader>tl", toggle_light_mode, { desc = "Toggle Light Mode" })
+
+-- Gitsigns Toggle Line Highlight
+vim.keymap.set("n", "<leader>tg", function()
+  local gitsigns = require("gitsigns")
+  gitsigns.toggle_linehl()
+end, { desc = "Toggle gitsigns line highlight" })
+
