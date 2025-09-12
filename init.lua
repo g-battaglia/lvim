@@ -22,5 +22,6 @@ vim.keymap.set("n", "<leader>tl", toggle_light_mode, { desc = "Toggle Light Mode
 vim.keymap.set("n", "<leader>tg", function()
   local gitsigns = require("gitsigns")
   gitsigns.toggle_linehl()
+  gitsigns.toggle_numhl()
 end, { desc = "Toggle gitsigns line highlight" })
 
