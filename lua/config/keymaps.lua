@@ -32,6 +32,15 @@ map("n", "<leader>uL", "<cmd>set rnu!<CR>", { silent = true, desc = "Toggle rela
 -- Save file
 map({ "n", "x" }, "<leader>fs", "<cmd>w<cr><esc>", { desc = "Save file" })
 
+map("n", "<leader>gf", function()
+  local ok, fzf = pcall(require, "fzf-lua")
+  if not ok then
+    vim.notify("fzf-lua non disponibile", vim.log.levels.ERROR)
+    return
+  end
+  fzf.git_status()
+end, { desc = "Trova file Git modificati" })
+
 -- Tabs
 map("n", "<leader><tab>h", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "<leader><tab>l", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
