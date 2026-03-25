@@ -2,7 +2,7 @@ return {
   "ahmedkhalf/project.nvim",
   event = "VeryLazy",
 
-  opt = function()
+  opts = function()
     return {
 
       -- Manual mode doesn't automatically change your root directory, so you have
@@ -17,7 +17,7 @@ return {
 
       -- All the patterns used to detect root dir, when **"pattern"** is in
       -- detection_methods
-      patterns = { "package.json", ".git", ".gitignore" },
+      patterns = {"pyproject.toml", "package.json", ".git", ".gitignore" },
 
       -- Table of lsp clients to ignore by name
       -- eg: { "efm", ... }

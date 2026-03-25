@@ -4,5 +4,8 @@ return {
   { "folke/flash.nvim",                        enabled = false },
   { "RRethy/vim-illuminate",                   enabled = false },
   { "nvim-treesitter/nvim-treesitter-context", enabled = false },
-  {"nvimdev/dashboard-nvim",                   enabled = false }
+  { "nvimdev/dashboard-nvim",                  enabled = false },
+  -- Replaced by ai.copilot-native + ai.sidekick
+  { "github/copilot.vim",                      enabled = false },
+  { "CopilotC-Nvim/CopilotChat.nvim",         enabled = false },
 }

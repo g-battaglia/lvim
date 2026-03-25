@@ -1,8 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- LSP Servers
-require("config.servers")
+-- LSP Servers now configured via lua/plugins/lsp-config.lua (LazyVim opts.servers pattern)
 
 -- Light/Dark Mode Toggle
 local function toggle_light_mode()

@@ -32,27 +32,23 @@ map("n", "<leader>uL", "<cmd>set rnu!<CR>", { silent = true, desc = "Toggle rela
 -- Save file
 map({ "n", "x" }, "<leader>fs", "<cmd>w<cr><esc>", { desc = "Save file" })
 
-map("n", "<leader>gf", function()
+map("n", "<leader>gs", function()
   local ok, fzf = pcall(require, "fzf-lua")
   if not ok then
     vim.notify("fzf-lua non disponibile", vim.log.levels.ERROR)
     return
   end
   fzf.git_status()
-end, { desc = "Trova file Git modificati" })
+end, { desc = "Git status (fzf)" })
 
 -- Tabs
-map("n", "<leader><tab>h", "<cmd>tabnext<cr>", { desc = "Next Tab" })
-map("n", "<leader><tab>l", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+map("n", "<leader><tab>l", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+map("n", "<leader><tab>h", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
 -- Open config files
 map("n", "<leader>xc", "<cmd>edit $MYVIMRC<cr>", { desc = "Open config file" })
 
--- Copilot.vim mappings
-map("i", "<C-]>", "<Plug>(copilot-next)", { silent = true, desc = "Copilot next" })
-map("i", "<C-[>", "<Plug>(copilot-prev)", { silent = true, desc = "Copilot prev" })
-map("i", "<C-}>", "<Plug>(copilot-complete)", { silent = true, desc = "Copilot complete" })
-map("i", "<C-{>", "<Plug>(copilot-dismiss)", { silent = true, desc = "Copilot dismiss" })
+-- Copilot: keymaps gestiti automaticamente da ai.copilot-native extra
 
 -- Prettier
 map({ "n", "v" }, "<leader>pp", "<cmd>Prettier<cr>", { silent = true, desc = "Prettier" })
