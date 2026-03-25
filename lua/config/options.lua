@@ -27,7 +27,7 @@ vim.opt.listchars = { space = "⋅", tab = "→ " }
 -- vim.opt.listchars:append "eol:↴"
 
 -- Set root directory
-vim.g.root_spec = { "lsp", { "package.json", ".git", "lua" }, "cwd" }
+vim.g.root_spec = { "lsp", { "pyproject.toml", "package.json", ".git", "lua" }, "cwd" }
 
 -- Fold
 vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
